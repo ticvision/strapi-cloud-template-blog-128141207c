@@ -236,12 +236,38 @@ async function importAuthors() {
   }
 }
 
+async function importTags() {
+  const tags = [
+    { name: 'Technology', slug: 'technology' },
+    { name: 'Development', slug: 'development' },
+    { name: 'Tutorial', slug: 'tutorial' },
+    { name: 'JavaScript', slug: 'javascript' },
+    { name: 'React', slug: 'react' },
+    { name: 'Node.js', slug: 'nodejs' },
+    { name: 'API', slug: 'api' },
+    { name: 'Backend', slug: 'backend' },
+    { name: 'Frontend', slug: 'frontend' },
+    { name: 'Web Development', slug: 'web-development' }
+  ];
+
+  for (const tag of tags) {
+    await createEntry({
+      model: 'tag',
+      entry: {
+        ...tag,
+        publishedAt: Date.now(),
+      },
+    });
+  }
+}
+
 async function importSeedData() {
   // Allow read of application content types
   await setPublicPermissions({
     article: ['find', 'findOne'],
     category: ['find', 'findOne'],
     author: ['find', 'findOne'],
+    tag: ['find', 'findOne'],
     global: ['find', 'findOne'],
     about: ['find', 'findOne'],
   });
@@ -249,6 +275,7 @@ async function importSeedData() {
   // Create all entries
   await importCategories();
   await importAuthors();
+  await importTags();
   await importArticles();
   await importGlobal();
   await importAbout();

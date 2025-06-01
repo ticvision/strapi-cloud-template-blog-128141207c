@@ -12,17 +12,42 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
     "name": {
       "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "bio": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true,
+      "unique": true
+    },
+    "profile_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "avatar": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": ["images", "files", "videos"]
-    },
-    "email": {
-      "type": "string"
     },
     "articles": {
       "type": "relation",

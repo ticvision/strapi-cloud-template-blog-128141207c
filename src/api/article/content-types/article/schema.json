@@ -13,21 +13,58 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "unique": true
+    },
+    "summary": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
     },
     "description": {
       "type": "text",
       "maxLength": 80
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "body": {
+      "type": "richtext"
+    },
+    "seo_title": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "meta_description": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "cover": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": ["images", "files", "videos"]
+    },
+    "published": {
+      "type": "datetime",
+      "required": true,
+      "default": "now"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["published", "draft"],
+      "default": "draft",
+      "required": true
     },
     "author": {
       "type": "relation",
@@ -40,6 +77,12 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "articles"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "articles"
     },
     "blocks": {
       "type": "dynamiczone",
