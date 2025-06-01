@@ -50,6 +50,10 @@
       "default": "draft",
       "required": true
     },
+    "published_date": {
+      "type": "datetime",
+      "required": false
+    },
     "author": {
       "type": "relation",
       "relation": "manyToOne",
