@@ -28,10 +28,6 @@
       "required": true,
       "maxLength": 160
     },
-    "description": {
-      "type": "text",
-      "maxLength": 80
-    },
     "body": {
       "type": "richtext"
     },
@@ -48,17 +44,6 @@
       "multiple": false,
       "required": false,
       "allowedTypes": ["images"]
-    },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
-    },
-    "published": {
-      "type": "datetime",
-      "required": true,
-      "default": "now"
     },
     "status": {
       "type": "enumeration",

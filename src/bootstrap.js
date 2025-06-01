@@ -168,14 +168,14 @@ async function updateBlocks(blocks) {
 
 async function importArticles() {
   for (const article of articles) {
-    const cover = await checkFileExistsBeforeUpload([`${article.slug}.jpg`]);
+    const featured_image = await checkFileExistsBeforeUpload([`${article.slug}.jpg`]);
     const updatedBlocks = await updateBlocks(article.blocks);
 
     await createEntry({
       model: 'article',
       entry: {
         ...article,
-        cover,
+        featured_image,
         blocks: updatedBlocks,
         // Make sure it's not a draft
         publishedAt: Date.now(),

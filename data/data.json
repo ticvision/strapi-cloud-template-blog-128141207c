@@ -71,8 +71,9 @@
       "author": {
         "id": 1
       },
-      "description": "Follow the story of Aaron Swartz, the boy who could change the world",
-      "cover": null,
+      "summary": "Follow the story of Aaron Swartz, the boy who could change the world",
+      "status": "published",
+      "featured_image": null,
       "blocks": [
         {
           "__component": "shared.rich-text",
@@ -106,8 +107,9 @@
       "author": {
         "id": 1
       },
-      "description": "Mantis shrimps, or stomatopods, are marine crustaceans of the order Stomatopoda.",
-      "cover": null,
+      "summary": "Mantis shrimps, or stomatopods, are marine crustaceans of the order Stomatopoda.",
+      "status": "published",
+      "featured_image": null,
       "blocks": [
         {
           "__component": "shared.rich-text",
@@ -141,8 +143,9 @@
       "author": {
         "id": 2
       },
-      "description": "How a bug on MySQL is becoming a meme on the internet",
-      "cover": null,
+      "summary": "How a bug on MySQL is becoming a meme on the internet",
+      "status": "published",
+      "featured_image": null,
       "blocks": [
         {
           "__component": "shared.rich-text",
@@ -176,8 +179,9 @@
       "author": {
         "id": 2
       },
-      "description": "Description of a beautiful picture",
-      "cover": null,
+      "summary": "Description of a beautiful picture",
+      "status": "published",
+      "featured_image": null,
       "blocks": [
         {
           "__component": "shared.rich-text",
@@ -211,8 +215,9 @@
       "author": {
         "id": 2
       },
-      "description": "Maybe the answer is in this article, or not...",
-      "cover": null,
+      "summary": "Maybe the answer is in this article, or not...",
+      "status": "published",
+      "featured_image": null,
       "blocks": [
         {
           "__component": "shared.rich-text",
